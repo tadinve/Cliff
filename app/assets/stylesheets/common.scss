@@ -1,2 +1,36 @@
 @import 'mixins';
 
+.main_head {
+	font-size: 40px;
+	line-height: 55px;
+}
+
+.top_border {
+	@include top_border;
+}
+
+.bottom_border {
+	@include bottom_border;
+}
+
+.h_border {
+	@include top_border;
+	@include bottom_border;
+}
+
+.text {
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.steps {	
+	width:680px;
+	margin:auto;
+	h3 {
+		width: 480px;
+	}
+}
+
+.maroon {
+	color: #9e0b0f;
+}

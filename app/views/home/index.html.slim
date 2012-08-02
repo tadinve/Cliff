@@ -1,23 +1,48 @@
 .row
-
-		h1.pagination-centered Every Entrepreneur has a Startup Quotient!
-		h2.pagination-centered What is yours?
-
-.row
-
 	.span4
-		= image_tag "mindscan.jpg", :alt => "Thinker" 
-	.span5 
-		h3 style="margin-top: 35px;"	
+		= image_tag "mind_icon.png", :alt => "Thinker"
+	.span8
+		h1.main_head.mtl Every Entrepreneur has a Startup Quotient!
+		h2.mtl
+			i What is yours?
+		h3.h_border.pvl.mtxl
 			div Though some people have innate skills to be an entrepreneur, most of us are not born with them. Fortunately for the rest of us these skills can be acquired.
-	.span3
-		- if !user_signed_in?
-			h3.pull-right style="margin-top: 35px;" Login with LinkedIn
-			a.offset1  href="/auth/linkedin" 				
-				= image_tag "linkedin_64.png", :size => "64x64", :alt => "LinkedIn" 
-
-
 .row
+	.span8
+		.text
+			|Login with 
+			b LinkedIn
+			|, take a couple of simple tests and find your 
+			b Startup Quotient.
+		.text
+			|Use the 
+			b "Self Learning" 
+			|section to know how to improve your score.
+	.span4
+		- if !user_signed_in?
+			.mtm.fr= link_to image_tag('signin_with_linkedin.png', :alt => 'LinkedIn'), '/auth/linkedin'
+			.clearfix
 
-		h3.pagination-centered style="color :blue;" Login with LinkedIn, take a couple of simple tests and find your Startup Quotient.
-		h3.pagination-centered Use the "Self Learning" section to know how to improve your score.
+/ .row
+
+/ 		h1.pagination-centered Every Entrepreneur has a Startup Quotient!
+/ 		h2.pagination-centered What is yours?
+
+/ .row
+
+/ 	.span4
+/ 		= image_tag "mind_icon.png", :alt => "Thinker" 
+/ 	.span5 
+/ 		h3 style="margin-top: 35px;"	
+/ 			div Though some people have innate skills to be an entrepreneur, most of us are not born with them. Fortunately for the rest of us these skills can be acquired.
+/ 	.span3
+/ 		- if !user_signed_in?
+/ 			h3.pull-right style="margin-top: 35px;" Login with LinkedIn
+/ 			a.offset1  href="/auth/linkedin" 				
+/ 				= image_tag "linkedin_64.png", :size => "64x64", :alt => "LinkedIn" 
+
+
+/ .row
+
+/ 		h3.pagination-centered style="color :blue;" Login with LinkedIn, take a couple of simple tests and find your Startup Quotient.
+/ 		h3.pagination-centered Use the "Self Learning" section to know how to improve your score.

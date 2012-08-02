@@ -4,7 +4,7 @@ $commets_white: #F0F0F0;
 $heading_gray: #484848;
 $yellow: #ffcf06;
 $black: #000;
-$border_color: #dbdbdb;
+$border_color: #77b8db;
 $default_link: #389ad5;
 @mixin rad1 {
 	-webkit-border-radius: 1px;
@@ -232,4 +232,12 @@ $default_link: #389ad5;
 
 @mixin default_font {
 	font-family: "Century Gothic Regular", Verdana, Arial;
+}
+
+@mixin top_border {
+	border-top: 1px solid $border_color;
+}
+
+@mixin bottom_border {
+	border-bottom: 1px solid $border_color;
 }

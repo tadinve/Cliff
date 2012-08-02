@@ -72,14 +72,17 @@ s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 .mrs,.mhs,.mas{margin-right:5px !important}
 .mrm,.mhm,.mam{margin-right:10px !important}
 .mrl,.mhl,.mal{margin-right:20px !important}
+.mrxl,.mhxl,.maxl{margin-right:40px !important}
 .mbn,.mvn,.man{margin-bottom:0px !important}  
 .mbs,.mvs,.mas{margin-bottom:5px !important}
 .mbm,.mvm,.mam{margin-bottom:10px !important}
 .mbl,.mvl,.mal{margin-bottom:20px !important}
+.mbxl,.mvxl,.maxl{margin-bottom:40px !important}
 .mln,.mhn,.man{margin-left:0px !important}
 .mls,.mhs,.mas{margin-left:5px !important}
 .mlm,.mhm,.mam{margin-left:10px !important}
 .mll,.mhl,.mal{margin-left:20px !important}
+.mlxl,.mhxl,.maxl{margin-left:40px !important}
 
 .navbar-search {
     margin-top: 5px !important;
