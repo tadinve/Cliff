@@ -1,48 +1,103 @@
+h1.main_head.mtl Every Entrepreneur has a Startup Quotient!
+
+h2.mtl.blue_head.fl
+	i= "What's Yours?"
+- if !user_signed_in?
+	.mtm.fr= link_to image_tag('signin_with_linkedin.png', :alt => 'LinkedIn'), '/auth/linkedin'
+.clearfix
+
 .row
-	.span4
+	.span3
 		= image_tag "mind_icon.png", :alt => "Thinker"
-	.span8
-		h1.main_head.mtl Every Entrepreneur has a Startup Quotient!
-		h2.mtl
-			i What is yours?
-		h3.h_border.pvl.mtxl
-			div Though some people have innate skills to be an entrepreneur, most of us are not born with them. Fortunately for the rest of us these skills can be acquired.
-.row
-	.span8
-		.text
-			|Login with 
-			b LinkedIn
-			|, take a couple of simple tests and find your 
-			b Startup Quotient.
-		.text
-			|Use the 
-			b "Self Learning" 
-			|section to know how to improve your score.
-	.span4
-		- if !user_signed_in?
-			.mtm.fr= link_to image_tag('signin_with_linkedin.png', :alt => 'LinkedIn'), '/auth/linkedin'
-			.clearfix
+	.span7
+		.h_border.pvl
+			h2 You Are Here Because You
+			.text
+				ul.tick_list
+					li Are contemplating the amazing idea of owning a business
+					li Are about make your dream come true, start your own business!
+					li Have just had a great business idea and can’t stop thinking about it
+					li Are gifted with the spirit of entrepreneurship and want to use it now
+					li Just took the monumental, brave decision of starting your own business
+					li Are toying with the idea of starting a promising venture but are not quite sure what
+
+.text_medium
+	p
+		b It’s great to own a business, no doubt.
+		|	Though not rocket science, it takes effort, planning and some skills to make it work. Starting a business or climbing a mountain – not very different from each other in magnitude, requires great energy, great commitment and proper skills. Yeah?
+
+	p When it comes to investment of resources or energy, there’s no dearth of advice – “trust no one, trust everyone, do not take risks, take every risk that comes your way, always carry an umbrella!” The challenge is to know what advice to take and what to keep aside for a rainy day, like always carry an umbrella isn’t useful for everyday.
+
+h2 Quotient?
+
+.text_medium
+	p
+		| Nature has a unique way of measuring humans with a quotient - intelligence, emotion, impulsive shopping! Likewise, 
+		b every start up and its entrepreneur have a quotient. Know what’s yours?
+
+	p
+		b Knowing one’s quotient is knowing how well your skills, attitude and IQ are suited to make you a successful entrepreneur. 
+		| “You don’t have it in you,” is passé – “you need to know what’s in you” works better so you can focus and build on the areas that you are weak in. 
+
+	p
+		| This quotient test by Cliff indicates all the hints that will help you avoid the realization of 
+		b ‘if only I knew that before’ 
+
+h2 It works? How?
+
+.text_medium
+	p
+		| It works – to the extent of putting forth 
+		b the analysis of what you have and what you need. 
+		| Will you start-up work? That depends solely on you! Not much proof is required to suggest that projects, business, ideas or motives work when one is aware of the strengths and weaknesses and the weaknesses are worked upon. 
+
+	p The test is intense as it is science! But how it works is pretty simple. 
+
+	p
+		| The Cliff test works on the 
+		b Hartman Principle formulated by Robert S Hartman 
+		| – a logician and philosopher and an original theorist of a scientific axiology which attaches a measure to the character and ability of an individual.  A Nobel Prize nominee, Hartman worked as consultant to major brands, applying the Value Theory to companies and products. You can read more about the Hartman Value Principle	
+		a href="#" here
+		| .
+	
+	p &nbsp;
+	p &nbsp;
+	p &nbsp;
+
+	p
+		b The test is in two parts. 
+
+	p
+		b Part One 
+		| – consists of 18 words or phrases which are required to be arranged in an 
+		b order of their value to you - top to bottom
+		| , beginning with the word/phrase which is of most value to you at the top.
+
+	p
+		b Part Two 
+		| – has 18 quotations which are required to be arranged in 
+		b order of their relativity to you – beginning with the quote that you relate with at the top.
+
+	p
+		| The test does not involve any descriptive or objective questions. Apart from updating your profile, 
+		b absolutely no writing/typing is required\
+		| , just drag and drop your options!
+
+	p At the end of the test, you are presented with a report that is easy to understand. Help is also available on the page to understand the report better.
+
+	p
+		b Once you get the report, 
+		b use the "Self Learning" section to know how to improve your score.
+
 
 / .row
-
-/ 		h1.pagination-centered Every Entrepreneur has a Startup Quotient!
-/ 		h2.pagination-centered What is yours?
-
-/ .row
-
-/ 	.span4
-/ 		= image_tag "mind_icon.png", :alt => "Thinker" 
-/ 	.span5 
-/ 		h3 style="margin-top: 35px;"	
-/ 			div Though some people have innate skills to be an entrepreneur, most of us are not born with them. Fortunately for the rest of us these skills can be acquired.
-/ 	.span3
-/ 		- if !user_signed_in?
-/ 			h3.pull-right style="margin-top: 35px;" Login with LinkedIn
-/ 			a.offset1  href="/auth/linkedin" 				
-/ 				= image_tag "linkedin_64.png", :size => "64x64", :alt => "LinkedIn" 
-
-
-/ .row
-
-/ 		h3.pagination-centered style="color :blue;" Login with LinkedIn, take a couple of simple tests and find your Startup Quotient.
-/ 		h3.pagination-centered Use the "Self Learning" section to know how to improve your score.
+/ 	.span8
+/ 		.text
+/ 			|Login with 
+/ 			b LinkedIn
+/ 			|, take a couple of simple tests and find your 
+/ 			b Startup Quotient.
+/ 		.text
+/ 			|Use the 
+/ 			b "Self Learning" 
+/ 			|section to know how to improve your score.

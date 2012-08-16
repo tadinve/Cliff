@@ -1,8 +1,14 @@
 @import 'mixins';
 
 .main_head {
-	font-size: 40px;
+	font-size: 45px;
 	line-height: 55px;
+	color: #00446C;
+}
+
+.blue_head {
+	color: $image_blue;
+	font-size: 35px;
 }
 
 .top_border {
@@ -23,6 +29,11 @@
 	line-height: 25px;
 }
 
+.text_medium {
+	font-size: 16px;
+	line-height: 23px;
+}
+
 .steps {	
 	width:680px;
 	margin:auto;
@@ -33,4 +44,10 @@
 
 .maroon {
 	color: #9e0b0f;
+}
+
+
+.tick_list {
+	@include ml(70px);
+	list-style-image: url('list_icon3.png');
 }
