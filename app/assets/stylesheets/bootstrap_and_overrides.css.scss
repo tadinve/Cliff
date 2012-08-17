@@ -2,8 +2,9 @@
 $iconSpritePath: image-path('glyphicons-halflings.png');
 $iconWhiteSpritePath: image-path('glyphicons-halflings-white.png');
 @import "bootstrap";
+@import "mixins";
 body {
-	padding-top: 50px;
+	padding-top: 60px;
 	background: #effeff;
 	color: #000;
 }
@@ -33,4 +34,9 @@ h3.blue {
 
 .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
 	width: 980px;
+}
+
+.well.blue {
+	background: $well_blue;
+	color: #FFF;
 }

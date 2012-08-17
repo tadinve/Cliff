@@ -19,7 +19,7 @@
         .pts.container
           = render 'layouts/navigation'
     #main{:role => "main"}
-      .container
+      .container.container_padding
         - flash.each do |name, msg|
           %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
             %a.close{"data-dismiss" => "alert"} ×

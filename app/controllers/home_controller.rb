@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!, :except =>'index'
+  before_filter :authenticate_user!, :except => [ :index, :self ]
+
+  def self
+  end
 
   def result_vars
   	@result1 = Result.find_by_user_id_and_test_num(current_user,1)

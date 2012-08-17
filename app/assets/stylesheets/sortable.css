@@ -1,6 +1,6 @@
 .ui-sortable li { cursor: move; line-height: 10px !important; }
 .ui-icon { height:13px !important; margin-top:-3px; line-height:10px !important; }
-#sortable { list-style-type: none; margin: 0; padding: 0; width: 80%; }
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
 #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; height: 10px; }
 #sortable li span { position: absolute; margin-left: -16px; }
 .ui-state-highlight { height: 1.5em; line-height: 1.2em; }

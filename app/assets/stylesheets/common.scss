@@ -1,5 +1,9 @@
 @import 'mixins';
 
+.container_padding {
+	@include pb(30px);
+}
+
 .main_head {
 	font-size: 45px;
 	line-height: 55px;
@@ -34,11 +38,18 @@
 	line-height: 23px;
 }
 
+.text_small {
+	font-size: 15px;
+	line-height: 20px;
+}
 .steps {	
-	width:680px;
+	width:880px;
 	margin:auto;
-	h3 {
-		width: 480px;
+	.step_description {
+		width: 680px;
+		h3, p {
+			@include ml(0px);
+		}
 	}
 }
 
@@ -47,7 +58,22 @@
 }
 
 
-.tick_list {
+ul.tick_list {
 	@include ml(70px);
 	list-style-image: url('list_icon3.png');
+}
+
+.right_shadow {
+	@include custom_shadow(1px 1px 3px #333);
+}
+
+ul.blue_list {
+	color: $image_blue;
+	font-size: 15px;
+	li {
+		@include mt(10px);
+		span {
+			color: #777;
+		}
+	}
 }

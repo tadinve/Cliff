@@ -57,12 +57,14 @@ h2 It works? How?
 		| The Cliff test works on the 
 		b Hartman Principle formulated by Robert S Hartman 
 		| – a logician and philosopher and an original theorist of a scientific axiology which attaches a measure to the character and ability of an individual.  A Nobel Prize nominee, Hartman worked as consultant to major brands, applying the Value Theory to companies and products. You can read more about the Hartman Value Principle	
-		a href="#" here
+		= link_to 'here', '#'
 		| .
-	
-	p &nbsp;
-	p &nbsp;
-	p &nbsp;
+
+	- if !user_signed_in?
+		.well.blue.right_shadow
+			h3.fl Sign In with your LinkedIn credentials to take the test now.
+			.fr.mts= link_to image_tag('signin_with_linkedin.png', :alt => 'LinkedIn', :style => "#{image_radius 7}"), '/auth/linkedin'
+			.clearfix
 
 	p
 		b The test is in two parts. 

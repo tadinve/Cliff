@@ -1,0 +1,27 @@
+@import 'mixins';
+
+.steps {
+	
+	.step {
+		background-image: url('steps.png');
+		width: 193px;
+		height: 114px;
+		
+		&.register {
+			background-position: 0px 0px;
+		}
+
+		&.test {
+			background-position: 0px -130px;
+		}
+
+		&.results {
+			background-position: 0px -290px;
+		}
+
+		&.appointment {
+			background-position: 0px -410px;
+		}
+	}
+
+}
