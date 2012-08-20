@@ -10,141 +10,141 @@ div
 			thead
 				tr
 					th.tc colspan="3" Part 1
-					th
+					/ th
 					th.tc colspan="3"  Part 2
 
 			tbody
 				tr
-					td= @dif1_rating
-					td.tc= @dif1
 					td.tr Differentiation
-					td.tc.blue DIF
+					td.tc= @dif1
+					td= @dif1_rating
+					/ td.tc.blue DIF
 					td Differentiation
 					td.tc= @dif2 
 					td.tr= @dif2_rating
 
 				tr
-					td= @dim_i1_rating
-					td.tc= @total_dim_i1 
 					td.tr Discerning Individuality
-					td.tc.blue DIM I
+					td.tc= @total_dim_i1 
+					td= @dim_i1_rating
+					/ td.tc.blue DIM I
 					td Self Regard
 					td.tc= @total_dim_i2 
 					td.tr= @dim_i2_rating
 
 				tr
-					td= @dim_e1_rating
-					td.tc= @total_dim_e1 
 					td.tr Practicality
-					td.tc.blue DIM E
+					td.tc= @total_dim_e1 
+					td= @dim_e1_rating
+					/ td.tc.blue DIM E
 					td Role Awareness
 					td.tc= @total_dim_e2 
 					td.tr= @dim_e2_rating
 
 				tr
-					td= @dim_s1_rating
-					td.tc= @total_dim_s1 
 					td.tr Discerning Systems or Concepts
-					td.tc.blue DIM S
+					td.tc= @total_dim_s1 
+					td= @dim_s1_rating
+					/ td.tc.blue DIM S
 					td Self Concept
 					td.tc= @total_dim_s2 
 					td.tr= @dim_s2_rating
 
 				tr
-					td= @dim1_rating
-					td.tc= @dim1 
 					td.tr Sense of Proportion
-					td.tc.blue DIM
+					td.tc= @dim1 
+					td= @dim1_rating
+					/ td.tc.blue DIM
 					td Sense of Proportion
 					td.tc= @dim2 
 					td.tr= @dim2_rating
 
 				tr
-					td= @dimper1_rating
-					td.tc= @dimper1
 					td.tr Sense of Meaning
-					td.tc.blue DIM%
+					td.tc= @dimper1
+					td= @dimper1_rating
+					/ td.tc.blue DIM%
 					td Sense of Meaning
 					td.tc= @dimper2
 					td.tr= @dimper2_rating
 
 				tr
-					td= @total_int_i1_rating
-					td.tc= @total_int_i1
 					td.tr Empathy
-					td.tc.blue INT I
+					td.tc= @total_int_i1
+					td= @total_int_i1_rating
+					/ td.tc.blue INT I
 					td Discerning self relevance 
 					td.tc= @total_int_i2
 					td.tr= @total_int_i2_rating
 
 				tr
-					td= @total_int_e1_rating
-					td.tc= @total_int_e1
 					td.tr Discerning practical relevance
-					td.tc.blue INT E
+					td.tc= @total_int_e1
+					td= @total_int_e1_rating
+					/ td.tc.blue INT E
 					td Discerning practical relevance
 					td.tc= @total_int_e2
 					td.tr= @total_int_e2_rating
 
 				tr
-					td= @total_int_s1_rating
-					td.tc= @total_int_s1
 					td.tr Discerning conceptual relevance
-					td.tc.blue INT S
+					td.tc= @total_int_s1
+					td= @total_int_s1_rating
+					/ td.tc.blue INT S
 					td Discerning self-concept relevance
 					td.tc= @total_int_s2
 					td.tr= @total_int_s2_rating
 
 				tr
-					td= @int1_rating
-					td.tc= @int1
 					td.tr Integration
-					td.tc.blue INT
+					td.tc= @int1
+					td= @int1_rating
+					/ td.tc.blue INT
 					td Integration
 					td.tc= @int2
 					td.tr= @int2_rating
 
 				tr
-					td= @intper1_rating
-					td.tc= @intper1
 					td.tr Relative Integration
-					td.tc.blue INT%
+					td.tc= @intper1
+					td= @intper1_rating
+					/ td.tc.blue INT%
 					td Relative Integration
 					td.tc= @intper2
 					td.tr= @intper2_rating
 
 				tr
-					td= @di1_rating
-					td.tc= @di1
 					td.tr Dimensional Integration
-					td.tc.blue DI
+					td.tc= @di1
+					td= @di1_rating
+					/ td.tc.blue DI
 					td Dimensional Integration
 					td.tc= @di2
 					td.tr= @di2_rating
 
 				tr
-					td= @total_dis1_rating
-					td.tc= @total_dis1
 					td.tr Distortion
-					td.tc.blue DIS
+					td.tc= @total_dis1
+					td= @total_dis1_rating
+					/ td.tc.blue DIS
 					td Distortion
 					td.tc= @total_dis2
 					td.tr= @total_dis2_rating
 
 				tr
-					td= @alper1_rating
-					td.tc= @alper1.to_s + ' %'
 					td.tr Attitude Index
-					td.tc.blue AI%
+					td.tc= @alper1.to_s + ' %'
+					td= @alper1_rating
+					/ td.tc.blue AI%
 					td Attitude Index
 					td.tc= @alper2.to_s + ' %'
 					td.tr= @alper2_rating
 
 				tr
-					td= @total_rho123_rating
-					td.tc= '%0.2f' % @rho1
 					td.tr Part 1 Validity
-					td.tc.blue RHO
+					td.tc= '%0.2f' % @rho1
+					td= @total_rho123_rating
+					/ td.tc.blue RHO
 					td Part 2 Validity
 					td.tc= '%0.2f' % @rho2
 					td.tr= @total_rho456_rating
