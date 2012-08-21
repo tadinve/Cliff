@@ -18,6 +18,7 @@ class HomeController < ApplicationController
     @home_tab = 'active'
     @page_header = "Home - Cliff's Hartman Model"
     result_vars
+    @incomplete = true if (@result1.blank? or @result2.blank?)
   end
   
 	def testone
@@ -73,6 +74,7 @@ class HomeController < ApplicationController
       @total_int_e1 = total_int_e1 @result1.item_order
       @total_int_s1 = total_int_s1 @result1.item_order
       @total_dis1 = total_dis1 @result1.item_order
+      @total_dis1_percent = (@total_dis1*100/8) < 100 ? (@total_dis1*100/8) : 95
       @total_bali1 = total_bali1 @result1.item_order
       @total_bale1 = total_bale1 @result1.item_order
       @total_bals1 = total_bals1 @result1.item_order
@@ -82,15 +84,21 @@ class HomeController < ApplicationController
 
       @dif1 = dif1 @result1.item_order
       @int1 = int1 @result1.item_order
+      @int1_percent = (@int1*100/43) < 100 ? (@int1*100/43) : 95
+      # @intone_percentage = 50
       @dim1 = dim1 @result1.item_order
       @di1 = di1 @result1.item_order
+      @di1_percent = (@di1*100/24) < 100 ? (@di1*100/24) : 95
 
-      @alper1 = (alper1 @result1.item_order).to_s + ' %'
+      alper1_num = alper1 @result1.item_order
+      @alper1 = alper1_num.to_s + ' %'
+      @alper1_percent = (alper1_num*100/74) < 100 ? (alper1_num*100/74) : 95
 
       @vq1 = @int1 + @dif1 + @dim1 + @total_dis1
       @vq2 = @int1 + @dim1 + @total_dis1
       @dimper1 = (@dim1 * 100) / @dif1
       @intper1 = (@int1 * 100) / @dif1
+      @intper1_percent = (@intper1*100/61) < 100 ? (@intper1*100/61) : 95
 
     end
 
@@ -137,12 +145,18 @@ class HomeController < ApplicationController
       @avg_row_number = Testone.avg_row_number
       @avg_new_order = Testone.avg_new_order @result1.item_order
       @total_dim_i1 = total_dim_i1 @result1.item_order 
+      @dim_i1_percent = (@total_dim_i1*100/43) < 100 ? (@total_dim_i1*100/43) : 95
       @total_dim_e1 = total_dim_e1 @result1.item_order
+      @dim_e1_percent = (@total_dim_e1*100/43) < 100 ? (@total_dim_e1*100/43) : 95
       @total_dim_s1 = total_dim_s1 @result1.item_order
+      @dim_s1_percent = (@total_dim_s1*100/43) < 100 ? (@total_dim_s1*100/43) : 95
       
       @total_int_i1 = total_int_i1 @result1.item_order
+      @total_int_i1_percent = (@total_int_i1*100/34) < 100 ? (@total_int_i1*100/34) : 95 
       @total_int_e1 = total_int_e1 @result1.item_order
+      @total_int_e1_percent = (@total_int_e1*100/34) < 100 ? (@total_int_e1*100/34) : 95 
       @total_int_s1 = total_int_s1 @result1.item_order
+      @total_int_s1_percent = (@total_int_s1*100/34) < 100 ? (@total_int_s1*100/34) : 95 
       @total_dis1 = total_dis1 @result1.item_order
       @total_bali1 = total_bali1 @result1.item_order
       @total_bale1 = total_bale1 @result1.item_order
@@ -151,10 +165,13 @@ class HomeController < ApplicationController
       @total_rho2 = total_rho2 @result1.item_order
       @total_rho3 = total_rho3 @result1.item_order
       @rho1 = final_rho @total_rho1, @total_rho2, @total_rho3
+      @rho1_percent = (@rho1*100/0.925) < 100 ? (@rho1*100/0.925) : 95 
 
       @dif1 = dif1 @result1.item_order
+      @dif1_percent = (@dif1*100/81) < 100 ? (@dif1*100/81) : 95 
       @int1 = int1 @result1.item_order
       @dim1 = dim1 @result1.item_order
+      @dim1_percent = (@dim1*100/24) < 100 ? (@dif1*100/24) : 95
       @di1 = di1 @result1.item_order
 
       @alper1 = alper1 @result1.item_order
@@ -162,6 +179,7 @@ class HomeController < ApplicationController
       @vq1 = @int1 + @dif1 + @dim1 + @total_dis1
       @vq2 = @int1 + @dim1 + @total_dis1
       @dimper1 = (@dim1 * 100) / @dif1
+      @dimper1_percent = (@dim1*100/61) < 100 ? (@dif1*100/61) : 95
       @intper1 = (@int1 * 100) / @dif1
       
       # ratings
@@ -250,7 +268,7 @@ class HomeController < ApplicationController
         @result.update_attributes( :user_id => current_user.id, :item_order => items, :test_num => test )
       end 
       flash[:notice] ="Test One result saved!"  
-      redirect_to :action =>"result"
+      redirect_to :action => 'testtwo'
     end
   end
 
@@ -265,7 +283,7 @@ class HomeController < ApplicationController
         @result.update_attributes( :user_id => current_user.id, :item_order => items, :test_num => test )
       end 
       flash[:notice] ="Test two result saved!"  
-      redirect_to :action =>"result"
+      redirect_to :action => 'final_result'
     end
   end
 

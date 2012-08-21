@@ -9,13 +9,16 @@ div
 		table.table.table-striped
 			thead
 				tr
-					th.tc colspan="3" Part 1
+					th.tc colspan="3" Part One
 					/ th
-					th.tc colspan="3"  Part 2
+					th.tc colspan="3"  Part Two
 
 			tbody
 				tr
-					td.tr Differentiation
+					td.tr
+						| Differentiation
+						= bs_progress_bar @dif1_percent, progress_filler(@dif1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @dif1
 					td= @dif1_rating
 					/ td.tc.blue DIF
@@ -24,8 +27,11 @@ div
 					td.tr= @dif2_rating
 
 				tr
-					td.tr Discerning Individuality
-					td.tc= @total_dim_i1 
+					td.tr
+						| Discerning Individuality
+						= bs_progress_bar @dim_i1_percent, progress_filler(@dim_i1_rating), :class => 'fr'
+						.clearfix
+					td.tc= @total_dim_i1
 					td= @dim_i1_rating
 					/ td.tc.blue DIM I
 					td Self Regard
@@ -33,7 +39,10 @@ div
 					td.tr= @dim_i2_rating
 
 				tr
-					td.tr Practicality
+					td.tr
+						| Practicality
+						= bs_progress_bar @dim_e1_percent, progress_filler(@dim_e1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @total_dim_e1 
 					td= @dim_e1_rating
 					/ td.tc.blue DIM E
@@ -42,7 +51,10 @@ div
 					td.tr= @dim_e2_rating
 
 				tr
-					td.tr Discerning Systems or Concepts
+					td.tr
+						| Discerning Systems or Concepts
+						= bs_progress_bar @dim_s1_percent, progress_filler(@dim_s1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @total_dim_s1 
 					td= @dim_s1_rating
 					/ td.tc.blue DIM S
@@ -51,7 +63,10 @@ div
 					td.tr= @dim_s2_rating
 
 				tr
-					td.tr Sense of Proportion
+					td.tr
+						| Sense of Proportion
+						= bs_progress_bar @dim1_percent, progress_filler(@dim1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @dim1 
 					td= @dim1_rating
 					/ td.tc.blue DIM
@@ -60,7 +75,10 @@ div
 					td.tr= @dim2_rating
 
 				tr
-					td.tr Sense of Meaning
+					td.tr
+						| Sense of Meaning
+						= bs_progress_bar @dimper1_percent, progress_filler(@dimper1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @dimper1
 					td= @dimper1_rating
 					/ td.tc.blue DIM%
@@ -69,7 +87,10 @@ div
 					td.tr= @dimper2_rating
 
 				tr
-					td.tr Empathy
+					td.tr
+						| Empathy
+						= bs_progress_bar @total_int_i1_percent, progress_filler(@total_int_i1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @total_int_i1
 					td= @total_int_i1_rating
 					/ td.tc.blue INT I
@@ -78,7 +99,10 @@ div
 					td.tr= @total_int_i2_rating
 
 				tr
-					td.tr Discerning practical relevance
+					td.tr
+						| Discerning practical relevance
+						= bs_progress_bar @total_int_e1_percent, progress_filler(@total_int_e1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @total_int_e1
 					td= @total_int_e1_rating
 					/ td.tc.blue INT E
@@ -87,7 +111,10 @@ div
 					td.tr= @total_int_e2_rating
 
 				tr
-					td.tr Discerning conceptual relevance
+					td.tr
+						| Discerning conceptual relevance
+						= bs_progress_bar @total_int_s1_percent, progress_filler(@total_int_s1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @total_int_s1
 					td= @total_int_s1_rating
 					/ td.tc.blue INT S
@@ -96,7 +123,10 @@ div
 					td.tr= @total_int_s2_rating
 
 				tr
-					td.tr Integration
+					td.tr
+						| Integration
+						= bs_progress_bar @int1_percent, progress_filler(@int1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @int1
 					td= @int1_rating
 					/ td.tc.blue INT
@@ -105,7 +135,10 @@ div
 					td.tr= @int2_rating
 
 				tr
-					td.tr Relative Integration
+					td.tr
+						| Relative Integration
+						= bs_progress_bar @intper1_percent, progress_filler(@intper1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @intper1
 					td= @intper1_rating
 					/ td.tc.blue INT%
@@ -114,7 +147,10 @@ div
 					td.tr= @intper2_rating
 
 				tr
-					td.tr Dimensional Integration
+					td.tr
+						| Dimensional Integration
+						= bs_progress_bar @di1_percent, progress_filler(@di1_rating), :class => 'fr'
+						.clearfix
 					td.tc= @di1
 					td= @di1_rating
 					/ td.tc.blue DI
@@ -123,7 +159,10 @@ div
 					td.tr= @di2_rating
 
 				tr
-					td.tr Distortion
+					td.tr
+						| Distortion
+						= bs_progress_bar @total_dis1_percent, progress_filler(@total_dis1_rating), :class => 'fr'
+						.clearfix						
 					td.tc= @total_dis1
 					td= @total_dis1_rating
 					/ td.tc.blue DIS
@@ -132,7 +171,10 @@ div
 					td.tr= @total_dis2_rating
 
 				tr
-					td.tr Attitude Index
+					td.tr
+						| Attitude Index
+						= bs_progress_bar @alper1_percent, progress_filler(@alper1_rating), :class => 'fr'
+						.clearfix												
 					td.tc= @alper1.to_s + ' %'
 					td= @alper1_rating
 					/ td.tc.blue AI%

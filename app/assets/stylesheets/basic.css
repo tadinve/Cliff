@@ -83,6 +83,7 @@ s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
 .mlm,.mhm,.mam{margin-left:10px !important}
 .mll,.mhl,.mal{margin-left:20px !important}
 .mlxl,.mhxl,.maxl{margin-left:40px !important}
+.tc { text-align: center !important; }
 
 .navbar-search {
     margin-top: 5px !important;

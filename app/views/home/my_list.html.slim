@@ -6,7 +6,10 @@ h1.pagination-centered
 		.step.register.fl
 		.step_description.fl
 			.mlxl
-				h3 Register
+				h3
+					.fl Register
+					.fl.tick
+					.clearfix
 				.text_small To take the test, register with Cliff by completing your profile which is easy and takes no more than a minute. The profile includes basic information on your name, academics and the stage at which your business is – we’d be thrilled to know a little about you!
 		.clearfix
 
@@ -14,7 +17,12 @@ h1.pagination-centered
 		.step.test.fl
 		.step_description.fl
 			.mlxl
-				h3 Take test
+				h3
+					.fl= link_to 'Take test', home_testone_path
+					- unless @incomplete == true
+						.fl.tick
+					.clearfix
+
 				.text_small
 					p Follow the instructions on the next pages to complete Part One and Part Two of the test. Taking the test involves only ‘dragging and dropping.’ The test does not involve any objective or descriptive fields, hence is easy to take!
 					
@@ -25,7 +33,8 @@ h1.pagination-centered
 		.step.results.fl
 		.step_description.fl
 			.mlxl
-				h3 See Results
+				h3
+					= link_to 'See Results', home_final_result_path
 				.text_small Upon completion of Part One and Part Two, click the ‘Report’ tab to get your results. 
 		.clearfix
 

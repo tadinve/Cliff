@@ -25,3 +25,11 @@
 	}
 
 }
+
+
+.tick {
+	background: url('completed_micro.png');
+	height: 25px;
+	width: 25px;
+	@include m(2px 0px 0px 10px)
+}

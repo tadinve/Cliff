@@ -40,3 +40,8 @@ h3.blue {
 	background: $well_blue;
 	color: #FFF;
 }
+
+.mini-progress {
+	width: 100px;
+	@include mb(0px);
+}
