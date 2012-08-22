@@ -18,9 +18,9 @@ module ApplicationHelper
 	end
 
 	def progress_filler rate
-    return 'progress-success' if ( rate == "Excellent" || rate == "Very Good")
-    return 'progress-warning' if ( rate == "Good" || rate == "Average" )
-    return 'progress-danger' if ( rate == "Poor" || rate == "Very Poor" || rate == "Bad")
+		return 'progress-success' if ( rate == "Excellent" || rate == "Very Good")
+		return 'progress-warning' if ( rate == "Good" || rate == "Average" )
+		return 'progress-danger' if ( rate == "Poor" || rate == "Very Poor" || rate == "Bad")
 	end
 	# bootstrap progress bar helpers (ends)
 
