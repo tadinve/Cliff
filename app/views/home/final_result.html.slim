@@ -9,187 +9,89 @@ div
 		table.table.table-striped
 			thead
 				tr
-					th.tc colspan="3" Part One
+					th.tc Part One
 					/ th
-					th.tc colspan="3"  Part Two
+					th.tc  Part Two
 
 			tbody
 				tr
-					td.tr
-						| Differentiation
-						= bs_progress_bar @dif1_percent, progress_filler(@dif1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @dif1
-					td= @dif1_rating
+					td= bs_progress_bar 'Differentiation', @dif1_percent, @dif1_rating, @dif1, :class => 'fr'
 					/ td.tc.blue DIF
-					td Differentiation
-					td.tc= @dif2 
-					td.tr= @dif2_rating
+					td= bs_progress_bar 'Differentiation', @dif2_percent, @dif2_rating, @dif2, :class => 'fr'
 
 				tr
-					td.tr
-						| Discerning Individuality
-						= bs_progress_bar @dim_i1_percent, progress_filler(@dim_i1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_dim_i1
-					td= @dim_i1_rating
+					td= bs_progress_bar 'Discerning Individuality', @dim_i1_percent, @dim_i1_rating, @total_dim_i1, :class => 'fr'
 					/ td.tc.blue DIM I
-					td Self Regard
-					td.tc= @total_dim_i2 
-					td.tr= @dim_i2_rating
+					td= bs_progress_bar 'Self Regard', @dim_i2_percent, @dim_i2_rating, @total_dim_i2, :class => 'fr'
 
 				tr
-					td.tr
-						| Practicality
-						= bs_progress_bar @dim_e1_percent, progress_filler(@dim_e1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_dim_e1 
-					td= @dim_e1_rating
+					td.tr= bs_progress_bar 'Practicality', @dim_e1_percent, @dim_e1_rating, @total_dim_e1, :class => 'fr'
 					/ td.tc.blue DIM E
-					td Role Awareness
-					td.tc= @total_dim_e2 
-					td.tr= @dim_e2_rating
+					td.tr= bs_progress_bar 'Role Awareness', @dim_e2_percent, @dim_e2_rating, @total_dim_e2, :class => 'fr'
 
 				tr
-					td.tr
-						| Discerning Systems or Concepts
-						= bs_progress_bar @dim_s1_percent, progress_filler(@dim_s1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_dim_s1 
-					td= @dim_s1_rating
+					td.tr= bs_progress_bar 'Discerning Systems or Concepts', @dim_s1_percent, @dim_s1_rating, @total_dim_s1, :class => 'fr'
 					/ td.tc.blue DIM S
-					td Self Concept
-					td.tc= @total_dim_s2 
-					td.tr= @dim_s2_rating
+					td.tr= bs_progress_bar 'Self Concept', @dim_s2_percent, @dim_s2_rating, @total_dim_s2, :class => 'fr'
 
 				tr
-					td.tr
-						| Sense of Proportion
-						= bs_progress_bar @dim1_percent, progress_filler(@dim1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @dim1 
-					td= @dim1_rating
+					td.tr= bs_progress_bar 'Sense of proportion', @dim1_percent, @dim1_rating, @dim1, :class => 'fr'
 					/ td.tc.blue DIM
-					td Sense of Proportion
-					td.tc= @dim2 
-					td.tr= @dim2_rating
+					td.tr= bs_progress_bar 'Sense of proportion', @dim2_percent, @dim2_rating, @dim2, :class => 'fr'
 
 				tr
-					td.tr
-						| Sense of Meaning
-						= bs_progress_bar @dimper1_percent, progress_filler(@dimper1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @dimper1
-					td= @dimper1_rating
+					td= bs_progress_bar 'Sense of Meaning', @dimper1_percent, @dimper1_rating, @dimper1, :class => 'fr'
 					/ td.tc.blue DIM%
-					td Sense of Meaning
-					td.tc= @dimper2
-					td.tr= @dimper2_rating
+					td= bs_progress_bar 'Sense of Meaning', @dimper2_percent, @dimper2_rating, @dimper2, :class => 'fr'
 
 				tr
-					td.tr
-						| Empathy
-						= bs_progress_bar @total_int_i1_percent, progress_filler(@total_int_i1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_int_i1
-					td= @total_int_i1_rating
+					td= bs_progress_bar 'Empathy', @total_int_i1_percent, @total_int_i1_rating, @total_int_i1, :class => 'fr'
 					/ td.tc.blue INT I
-					td Discerning self relevance 
-					td.tc= @total_int_i2
-					td.tr= @total_int_i2_rating
-
+					td= bs_progress_bar 'Discerning self relevance', @total_int_i2_percent, @total_int_i2_rating, @total_int_i2, :class => 'fr'
+					
 				tr
-					td.tr
-						| Discerning practical relevance
-						= bs_progress_bar @total_int_e1_percent, progress_filler(@total_int_e1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_int_e1
-					td= @total_int_e1_rating
+					td= bs_progress_bar 'Discerning practical relevance', @total_int_e1_percent, @total_int_e1_rating, @total_int_e1, :class => 'fr'
 					/ td.tc.blue INT E
-					td Discerning practical relevance
-					td.tc= @total_int_e2
-					td.tr= @total_int_e2_rating
+					td= bs_progress_bar 'Discerning practical relevance', @total_int_e2_percent, @total_int_e2_rating, @total_int_e2, :class => 'fr'
 
 				tr
-					td.tr
-						| Discerning conceptual relevance
-						= bs_progress_bar @total_int_s1_percent, progress_filler(@total_int_s1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @total_int_s1
-					td= @total_int_s1_rating
+					td= bs_progress_bar 'Discerning conceptual relevance', @total_int_s1_percent, @total_int_s1_rating, @total_int_s1, :class => 'fr'
 					/ td.tc.blue INT S
-					td Discerning self-concept relevance
-					td.tc= @total_int_s2
-					td.tr= @total_int_s2_rating
+					td= bs_progress_bar 'Discerning self-concept relevance', @total_int_s2_percent, @total_int_s2_rating, @total_int_s2, :class => 'fr'
 
 				tr
-					td.tr
-						| Integration
-						= bs_progress_bar @int1_percent, progress_filler(@int1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @int1
-					td= @int1_rating
+					td= bs_progress_bar 'Integration', @int1_percent, @int1_rating, @int1, :class => 'fr'
 					/ td.tc.blue INT
-					td Integration
-					td.tc= @int2
-					td.tr= @int2_rating
+					td= bs_progress_bar 'Integration', @int2_percent, @int2_rating, @int2, :class => 'fr'
 
 				tr
-					td.tr
-						| Relative Integration
-						= bs_progress_bar @intper1_percent, progress_filler(@intper1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @intper1
-					td= @intper1_rating
+					td= bs_progress_bar 'Relative Integration', @intper1_percent, @intper1_rating, @intper1, :class => 'fr'
 					/ td.tc.blue INT%
-					td Relative Integration
-					td.tc= @intper2
-					td.tr= @intper2_rating
+					td= bs_progress_bar 'Relative Integration', @intper2_percent, @intper2_rating, @intper2, :class => 'fr'
 
 				tr
-					td.tr
-						| Dimensional Integration
-						= bs_progress_bar @di1_percent, progress_filler(@di1_rating), :class => 'fr'
-						.clearfix
-					td.tc= @di1
-					td= @di1_rating
+					td= bs_progress_bar 'Dimensional Integration', @di1_percent, @di1_rating, @di1, :class => 'fr'
 					/ td.tc.blue DI
-					td Dimensional Integration
-					td.tc= @di2
-					td.tr= @di2_rating
+					td= bs_progress_bar 'Dimensional Integration', @di2_percent, @di2_rating, @di2, :class => 'fr'
 
 				tr
-					td.tr
-						| Distortion
-						= bs_progress_bar @total_dis1_percent, progress_filler(@total_dis1_rating), :class => 'fr'
-						.clearfix						
-					td.tc= @total_dis1
-					td= @total_dis1_rating
+					td= bs_progress_bar 'Distortion', @total_dis1_percent, @total_dis1_rating, @total_dis1, :class => 'fr'
 					/ td.tc.blue DIS
-					td Distortion
-					td.tc= @total_dis2
-					td.tr= @total_dis2_rating
+					td= bs_progress_bar 'Distortion', @total_dis2_percent, @total_dis2_rating, @total_dis2, :class => 'fr'
 
 				tr
-					td.tr
-						| Attitude Index
-						= bs_progress_bar @alper1_percent, progress_filler(@alper1_rating), :class => 'fr'
-						.clearfix												
-					td.tc= @alper1.to_s + ' %'
-					td= @alper1_rating
+					td= bs_progress_bar 'Attitude Index', @alper1_percent, @alper1_rating, @alper1.to_s+' %', :class => 'fr'
 					/ td.tc.blue AI%
-					td Attitude Index
-					td.tc= @alper2.to_s + ' %'
-					td.tr= @alper2_rating
+					td= bs_progress_bar 'Attitude Index', @alper2_percent, @alper2_rating, @alper2.to_s+' %', :class => 'fr'
 
 				tr
 					td.tr Part 1 Validity
-					td.tc= '%0.2f' % @rho1
-					td= @total_rho123_rating
+					/ td.tc= '%0.2f' % @rho1
+					/ td= @total_rho123_rating
 					/ td.tc.blue RHO
 					td Part 2 Validity
-					td.tc= '%0.2f' % @rho2
-					td.tr= @total_rho456_rating
+					/ td.tc= '%0.2f' % @rho2
+					/ td.tr= @total_rho456_rating
 
 		table.table.table-striped
 			thead

@@ -74,7 +74,6 @@ class HomeController < ApplicationController
       @total_int_e1 = total_int_e1 @result1.item_order
       @total_int_s1 = total_int_s1 @result1.item_order
       @total_dis1 = total_dis1 @result1.item_order
-      @total_dis1_percent = (@total_dis1*100/8) < 100 ? (@total_dis1*100/8) : 95
       @total_bali1 = total_bali1 @result1.item_order
       @total_bale1 = total_bale1 @result1.item_order
       @total_bals1 = total_bals1 @result1.item_order
@@ -84,15 +83,11 @@ class HomeController < ApplicationController
 
       @dif1 = dif1 @result1.item_order
       @int1 = int1 @result1.item_order
-      @int1_percent = (@int1*100/43) < 100 ? (@int1*100/43) : 95
-      # @intone_percentage = 50
       @dim1 = dim1 @result1.item_order
       @di1 = di1 @result1.item_order
-      @di1_percent = (@di1*100/24) < 100 ? (@di1*100/24) : 95
 
       alper1_num = alper1 @result1.item_order
       @alper1 = alper1_num.to_s + ' %'
-      @alper1_percent = (alper1_num*100/74) < 100 ? (alper1_num*100/74) : 95
 
       @vq1 = @int1 + @dif1 + @dim1 + @total_dis1
       @vq2 = @int1 + @dim1 + @total_dis1
@@ -173,14 +168,20 @@ class HomeController < ApplicationController
       @dim1 = dim1 @result1.item_order
       @dim1_percent = (@dim1*100/24) < 100 ? (@dif1*100/24) : 95
       @di1 = di1 @result1.item_order
+      @total_dis1_percent = (@total_dis1*100/8) < 100 ? (@total_dis1*100/8) : 95
+      @int1_percent = (@int1*100/43) < 100 ? (@int1*100/43) : 95
 
-      @alper1 = alper1 @result1.item_order
+      @di1_percent = (@di1*100/24) < 100 ? (@di1*100/24) : 95
+      alper1_num = alper1 @result1.item_order
+      @alper1 = alper1_num
+      @alper1_percent = (alper1_num*100/74) < 100 ? (alper1_num*100/74) : 95
 
       @vq1 = @int1 + @dif1 + @dim1 + @total_dis1
       @vq2 = @int1 + @dim1 + @total_dis1
       @dimper1 = (@dim1 * 100) / @dif1
       @dimper1_percent = (@dim1*100/61) < 100 ? (@dif1*100/61) : 95
       @intper1 = (@int1 * 100) / @dif1
+      @intper1_percent = (@intper1*100/61) < 100 ? (@intper1*100/61) : 95
       
       # ratings
       @dif1_rating = rating @dif1, :r1 => 30, :r2 => 31, :r3 => 40, :r4 => 41, :r5 => 50, :r6 => 51, :r7 => 60, :r8 => 61, :r9 => 70, :r10 => 71, :r11 => 80, :r12 => 81
@@ -233,7 +234,29 @@ class HomeController < ApplicationController
       @vq3 = @int2 + @dif2 + @dim2 + @total_dis2
       @vq4 = @int2 + @dim2 + @total_dis2
       @dimper2 = (@dim2 * 100) / @dif2
+      @dimper2_percent = (@dim2*100/61) < 100 ? (@dif2*100/61) : 95
       @intper2 = (@int2 * 100) / @dif2
+      
+      @int2_percent = (@int2*100/43) < 100 ? (@int2*100/43) : 95
+      @intper2_percent = (@intper2*100/61) < 100 ? (@intper2*100/61) : 95
+
+
+      @dim_i2_percent = (@total_dim_i2*100/43) < 100 ? (@total_dim_i2*100/43) : 95
+      @dim_e2_percent = (@total_dim_e2*100/43) < 100 ? (@total_dim_e2*100/43) : 95
+      @dim_s2_percent = (@total_dim_s2*100/43) < 100 ? (@total_dim_s2*100/43) : 95
+      @total_int_i2_percent = (@total_int_i2*100/34) < 100 ? (@total_int_i2*100/34) : 95 
+      @total_int_e2_percent = (@total_int_e2*100/34) < 100 ? (@total_int_e2*100/34) : 95 
+      @total_int_s2_percent = (@total_int_s2*100/34) < 100 ? (@total_int_s2*100/34) : 95 
+      @rho2_percent = (@rho2*100/0.925) < 100 ? (@rho2*100/0.925) : 95 
+      @dif2_percent = (@dif2*100/81) < 100 ? (@dif2*100/81) : 95 
+      @dim2_percent = (@dim2*100/24) < 100 ? (@dif2*100/24) : 95
+      @total_dis2_percent = (@total_dis2*100/8) < 100 ? (@total_dis2*100/8) : 95
+      @di2_percent = (@di2*100/24) < 100 ? (@di2*100/24) : 95
+
+      alper2_num = alper2 @result2.item_order
+      @alper2 = alper2_num
+      @alper2_percent = (alper2_num*100/74) < 100 ? (alper2_num*100/74) : 95
+
 
       # ratings
       @dif2_rating = rating @dif2, :r1 => 30, :r2 => 31, :r3 => 40, :r4 => 41, :r5 => 50, :r6 => 51, :r7 => 60, :r8 => 61, :r9 => 70, :r10 => 71, :r11 => 80, :r12 => 81

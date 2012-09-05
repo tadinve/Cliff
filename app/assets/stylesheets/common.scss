@@ -77,3 +77,15 @@ ul.blue_list {
 		}
 	}
 }
+
+
+.overlay {
+	width: 100px;
+	@include relative;
+	.value {
+		@include absolute;
+		left: 5px;
+		top: 0px;
+		width: 100%;
+	}
+}
