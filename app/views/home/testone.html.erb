@@ -1,51 +1,61 @@
-<h1 class="bottom_border pbm mbl tc">Part - One</h1>
+<h1 class="bottom_border pbm mbl tc" id="get_result1">Part - One</h1>
 
 <div class="">
   <!-- <h3>Test One Items</h3> -->
-  <div class="span4">
-    <ul class="blue_list">
-      <li>
-        <span>On the right hand-side are 18 words/phrases with each phrase evoking feelings that are unique to you.</span>
-      </li>
-      <li>
-        <span>Each word/phrase is perceived differently by different individuals. The value attached to them vary from person to person.</span>
-      </li>
-      <li>
-        <span>Arrange the list by dragging and dropping the words/phrases in the descending order of your value to them.</span>
-      </li>
-      <li>
-        <span>Begin with the word/phrase that has the best i.e. is of the highest value to you.</span>
-      </li>
-      <li>
-        <span>At the end of the list will be the word/phrase that is of least or no value to you.</span>
-      </li>
-      <li>
-        <span>Try not judging the expressions by any other value than what is true to you.</span>
-      </li>
-      <li>
-        <span>It is best to work quickly. You can rearrange these words and phrases as much as you want until you are ready to continue to Part 2.</span>
-      </li>
-      <li>
-        <span>There is no time limit, but most people complete Part 1 in less than ten minutes.</span>
-      </li>
+  <div class="row">
+    <div class="span4">
+      <ul class="blue_list">
+        <li>
+          <span>On the right hand-side are 18 words/phrases with each phrase evoking feelings that are unique to you.</span>
+        </li>
+        <li>
+          <span>Each word/phrase is perceived differently by different individuals. The value attached to them vary from person to person.</span>
+        </li>
+        <li>
+          <span>Arrange the list by dragging and dropping the words/phrases in the descending order of your value to them.</span>
+        </li>
+        <li>
+          <span>Begin with the word/phrase that has the best i.e. is of the highest value to you.</span>
+        </li>
+        <li>
+          <span>At the end of the list will be the word/phrase that is of least or no value to you.</span>
+        </li>
+        <li>
+          <span>Try not judging the expressions by any other value than what is true to you.</span>
+        </li>
+        <li>
+          <span>It is best to work quickly. You can rearrange these words and phrases as much as you want until you are ready to continue to Part 2.</span>
+        </li>
+        <li>
+          <span>There is no time limit, but most people complete Part 1 in less than ten minutes.</span>
+        </li>
 
-    </ul>  
-  </div>
-  <div class="span5">
-    <%= form_for :items, :url =>{:action =>"update_list1",:test =>"1"} do |f| %>
-      <ul id="sortable">
-          <% n=1; @current_order.each do |order_id| %>
-            <% l = Testone.find(order_id) %>
-            <li id ="<%= order_id %>" class="ui-state-default items">
-              <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
-              <span class="li_content"><%= l.item %></span>
-              <% n = n+1 %>
-            </li>
-          <%end %>
-      </ul> 
+      </ul>  
+    </div>
+    <div class="span1" style="width:25px;">
+      <ul style="margin:0px">
+        <%- (1..18).to_a.each do |i| %>
+          <li style="line-height:25px;height:25px;"><%= i %></li>
+        <%- end %>
+      </ul>
+    </div>
+    <div class="span4" style="margin:0px;">
+      <%= form_for :items, :url =>{:action =>"update_list1",:test =>"1"} do |f| %>
+        <ul id="sortable">
+            <% n=1; @current_order.each do |order_id| %>
+              <% l = Testone.find(order_id) %>
+              <li id="<%= l.id %>" class="ui-state-default items">
+                <!-- <span class="ui-icon ui-icon-arrowthick-2-n-s"></span> -->
+                <span></span>
+                <span class="li_content"><%= l.item %> (<%= order_id %>)</span>
+                <% n = n+1 %>
+              </li>
+            <%end %>
+        </ul> 
 
-      <%= f.hidden_field "order",:value =>"", :id => 'order_field' %>
-      <%= f.button "Save List",:class =>'btn btn-success btn-large', :id => 'save_sorted' %>
-    <% end %>     
+        <%= f.hidden_field "order",:value =>"", :id => 'order_field' %>
+        <%= f.button "Save List",:class =>'btn btn-success btn-large', :id => 'save_sorted' %>
+      <% end %>     
+    </div>
   </div>
 </div>

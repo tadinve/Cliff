@@ -85,12 +85,16 @@ div
 					td= bs_progress_bar 'Attitude Index', @alper2_percent, @alper2_rating, @alper2.to_s+' %', :class => 'fr'
 
 				tr
-					td.tr Part 1 Validity
-					/ td.tc= '%0.2f' % @rho1
+					td.tr
+						.fl Part 1 Validity
+						.fr style="width: 170px;"= '%0.2f' % @rho1
+						.clearfix
 					/ td= @total_rho123_rating
 					/ td.tc.blue RHO
-					td Part 2 Validity
-					/ td.tc= '%0.2f' % @rho2
+					td
+						.fl Part 2 Validity
+						.fr style="width: 170px;"= '%0.2f' % @rho2
+						.clearfix
 					/ td.tr= @total_rho456_rating
 
 		table.table.table-striped

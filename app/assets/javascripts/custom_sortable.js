@@ -18,9 +18,18 @@ function change_value ()
   var items = new Array();
   var item;
 
+  // $('.items').each(function(){
+  //   item = $(this).attr('id');
+  //   items.push(item);
+  // });
+  place = 1;
   $('.items').each(function(){
-      item = $(this).attr('id');
-      items.push(item);
-    });
+    item = $(this).attr('id');
+    items[item] = place;
+    place++;
+  });
+
+  items.shift()
+
   $('#order_field').attr('value', items);
 }

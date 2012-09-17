@@ -25,22 +25,24 @@ class HomeController < ApplicationController
     @test_one_tab = 'active'
     @page_header = "Test One Items - Cliff's Hartman Model"
     result_vars
-    if @result1
-      @current_order = @result1.item_order.split(',')
-    else
-      @current_order = Testone.all.map{ |t| t.id }
-    end
+    # if @result1
+    #   @current_order = @result1.item_order.split(',')
+    # else
+    #   @current_order = Testone.all.map{ |t| t.id }
+    # end
+    @current_order = Testone.all.map{ |t| t.id }
   end	
 
 	def testtwo
     @test_two_tab = 'active'
     @page_header = "Test Two Items - Cliff's Hartman Model"
     result_vars
-    if @result2
-      @current_order = @result2.item_order.split(',')
-    else
-      @current_order = Testtwo.all.map{ |t| t.id }
-    end
+    # if @result2
+    #   @current_order = @result2.item_order.split(',')
+    # else
+    #   @current_order = Testtwo.all.map{ |t| t.id }
+    # end
+    @current_order = Testtwo.all.map{ |t| t.id }
   end	
 
   def resultone

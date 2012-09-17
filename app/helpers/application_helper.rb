@@ -13,14 +13,14 @@ module ApplicationHelper
 		progress = content_tag(
 													'div', 
 													content_tag( 'div', '', :class => 'bar', :style => "width: #{percent}%;" ),
-													opts.merge(:class => "progress #{progress_filler(rate)} progress-striped mini-progress #{opts[:class]}")
+													opts.merge(:class => "progress #{progress_filler(rate)} mini-progress #{opts[:class]}")
 												)
 		rating = content_tag(:div, rate,	:class => 'value')
 		value = content_tag(:div, value, :class => 'mls fl')
 		clearfix = content_tag(:div, '', :class => 'clearfix')
 		overlay = content_tag(:div, progress + rating, :class => 'overlay fl')
 
-		final_bar = content_tag(:div, overlay + value + clearfix, :class => 'fr')
+		final_bar = content_tag(:div, overlay + value + clearfix, :class => 'fr', :style => 'width: 170px;')
 
 		return content_tag(:div, (parameter + final_bar + clearfix).html_safe )
 
