@@ -32,9 +32,9 @@ class Testtwo < ActiveRecord::Base
 	end
 
 	def dis2 new_row_number
-		check1 = ( new_row_number.to_i < 10 ) and ( self.row_number < 10 )
-		check2 = ( new_row_number.to_i > 9 ) and ( self.row_number > 9 )
-		main_check = check1 or check2
+		check1 = ( new_row_number.to_i < 10 ) && ( self.row_number < 10 )
+		check2 = ( new_row_number.to_i > 9 ) && ( self.row_number > 9 )
+		main_check = check1 || check2
 		final = ( main_check == true ) ? 0 : 1
 		return final
 	end
